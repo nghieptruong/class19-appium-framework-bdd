@@ -1,0 +1,11 @@
+title: "Automation Execution Report"
+protocol: "HTTP"
+domain: "127.0.0.1"
+brightness: 0.8
+colors:
+  pass: "#00af00"
+  fail: "#ff0000"
+  skip: "#ffaa00"
+displayOptions:
+  tag: true
+  features: true

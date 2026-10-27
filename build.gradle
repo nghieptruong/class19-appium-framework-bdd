@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.seleniumhq.selenium:selenium-java:4.34.0")
+    implementation("io.appium:java-client:9.5.0")
+    implementation("org.testng:testng:7.12.0")
+    implementation("org.apache.logging.log4j:log4j-core:2.26.1")
+    implementation("org.apache.logging.log4j:log4j-api:2.26.1")
+    implementation("com.aventstack:extentreports:5.1.2")
+    implementation("io.cucumber:cucumber-java:7.28.1")
+    implementation("io.cucumber:cucumber-testng:7.28.1")
+    implementation("tech.grasshopper:extentreports-cucumber7-adapter:1.14.0")
+}
+
+test {
+    useTestNG() {
+        useDefaultListeners = true //dùng để tạo report testNG
+        outputDirectory = file("$projectDir/test-output") // folder chứa testNG report
+    }
+}
